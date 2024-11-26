@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum PopupMenuPages { container }
+enum PopupMenuPages { container, layoutBuilder, botao }
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,6 +19,13 @@ class HomePage extends StatelessWidget {
                     case PopupMenuPages.container:
                       Navigator.of(context).pushNamed('/container');
                       break;
+                    case PopupMenuPages.layoutBuilder:
+                      Navigator.of(context).pushNamed('/layoutBuilder');
+                      break;
+                    case PopupMenuPages.botao:
+                      Navigator.of(context).pushNamed('/botao');
+                      break;
+
                     default:
                   }
                 },
@@ -26,7 +33,12 @@ class HomePage extends StatelessWidget {
                   return <PopupMenuItem<PopupMenuPages>>[
                     const PopupMenuItem(
                         value: PopupMenuPages.container,
-                        child: Text('Cardapio'))
+                        child: Text('Cardapio')),
+                    const PopupMenuItem(
+                        value: PopupMenuPages.layoutBuilder,
+                        child: Text('Layout Builder')),
+                    const PopupMenuItem(
+                        value: PopupMenuPages.botao, child: Text('Botoes'))
                   ];
                 })
           ],
