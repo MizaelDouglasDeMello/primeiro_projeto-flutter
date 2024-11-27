@@ -74,6 +74,32 @@ class _BotaoPageState extends State<BotaoPage> {
                 label: Text('FloatingActionButton.extended'),
                 icon: Icon(Icons.add),
               ),
+              GestureDetector(
+                onTap: () {
+                  print("GestureDetector clicado");
+                },
+                child: Container(
+                  padding: EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text('GestureDetector'),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(40),
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: InkWell(
+                  onTap: () {
+                    print("InkWell clicado");
+                  },
+                  child: Text('InkWell'),
+                ),
+              )
             ],
           ),
         ));
